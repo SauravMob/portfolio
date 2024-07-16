@@ -1,27 +1,28 @@
 "use client"
 
-import React, { useState, useEffect } from 'react';
-import { motion } from 'framer-motion';
-import _ from 'lodash';
-import Home from './(home)/home';
+import React, { useState, useEffect } from 'react'
+import { motion } from 'framer-motion'
+import _ from 'lodash'
+import Home from './(home)/home'
+import About from './(home)/about'
 
 const Page = () => {
-  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 });
+  const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
 
   useEffect(() => {
     const throttledMouseMove = _.throttle((e) => {
       setMousePosition({
         x: e.clientX,
         y: e.clientY
-      });
-    }, 16); // Adjust the delay as needed
+      })
+    }, 16)
 
-    window.addEventListener('mousemove', throttledMouseMove);
+    window.addEventListener('mousemove', throttledMouseMove)
 
     return () => {
-      window.removeEventListener('mousemove', throttledMouseMove);
-    };
-  }, []);
+      window.removeEventListener('mousemove', throttledMouseMove)
+    }
+  }, [])
 
   const variants = {
     default: {
@@ -31,7 +32,7 @@ const Page = () => {
       rotate: [0, 0, 270, 270, 0],
       borderRadius: ['20%', '20%', '50%', '50%', '20%'],
     },
-  };
+  }
 
   const style = {
     transform: 'translate(-50%, -50%)',
@@ -42,7 +43,7 @@ const Page = () => {
     background: 'linear-gradient(#43d9ad, #4d5bce)',
     opacity: 0.4,
     zIndex: -1,
-  };
+  }
 
   return (
     <main className="flex min-h-screen flex-col">
@@ -53,7 +54,7 @@ const Page = () => {
         animate="default"
         transition={{
           x: {
-            duration: 0.1, 
+            duration: 0.1,
             ease: 'linear',
           },
           y: {
@@ -67,8 +68,16 @@ const Page = () => {
         }}
       ></motion.div>
       <Home />
+      <motion.div
+        transition={{ duration: 0.5 }}
+        initial={{ opacity: 0, scale: 0.5, x: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.5 }}
+      >
+        <About />
+      </motion.div>
     </main>
-  );
-};
+  )
+}
 
-export default Page;
+export default Page
