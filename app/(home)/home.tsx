@@ -1,5 +1,8 @@
 import React from 'react'
 import localFont from 'next/font/local'
+import Image from 'next/image'
+import profile_pic from '@/public/profile_pic.jpg'
+import real_profile_pic from '@/public/real_profile_pic.jpeg'
 
 const myFont = localFont({
     src: "../../public/LondrinaOutline.ttf"
@@ -34,9 +37,24 @@ const Home = () => {
                 <p className='font-semibold text-7xl text-gray-150'>Software Developer</p>
                 <p className='font-semibold text-3xl text-gray-600 ml-2 mt-4'>Full Stack Developer</p>
             </div>
-            <div className='flex items-center justify-center col-span-1'>
-                <div className='bg-gray-400 h-96 w-96 rounded-full'>
-
+            <div className='flip-container my-auto h-96 w-96 rounded-full'>
+                <div className='relative w-full h-full [transform-style:preserve-3d] transition transform duration-1000 hover:[transform:rotateY(180deg)]'>
+                    <div className='absolute w-full h-full rounded-full [backface-visibility:hidden]'>
+                        <Image
+                            src={profile_pic}
+                            layout='fill'
+                            className='h-96 w-96 rounded-full'
+                            alt="Front Image"
+                        />
+                    </div>
+                    <div className='absolute w-full h-full rounded-full [backface-visibility:hidden] [transform:rotateY(180deg)]'>
+                        <Image
+                            src={real_profile_pic}
+                            layout='fill'
+                            className='h-96 w-96 rounded-full'
+                            alt="Back Image"
+                        />
+                    </div>
                 </div>
             </div>
         </div>
