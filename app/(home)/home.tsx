@@ -12,7 +12,7 @@ const Home = () => {
     return (
         <div
             id="home"
-            className='w-full h-screen sm:min-h-[90vh] grid grid-cols-3 gap-4'
+            className='w-full h-screen sm:min-h-[90vh] grid grid-cols-3 gap-4 cursor-default'
         >
             <div className='p-16 col-span-2 my-auto'>
                 <button className='absolute left-0 rotate-90 top-72'>Scroll</button>

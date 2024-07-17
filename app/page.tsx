@@ -5,6 +5,7 @@ import { motion } from 'framer-motion'
 import _ from 'lodash'
 import Home from './(home)/home'
 import About from './(home)/about'
+import Skills from './(home)/skills'
 
 const Page = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -41,7 +42,7 @@ const Page = () => {
     borderRadius: '50% 22% 40% 80%',
     filter: 'blur(100px)',
     background: 'linear-gradient(#43d9ad, #4d5bce)',
-    opacity: 0.4,
+    opacity: 0.5,
     zIndex: -1,
   }
 
@@ -67,14 +68,28 @@ const Page = () => {
           },
         }}
       ></motion.div>
-      <Home />
+      <motion.div
+        transition={{ duration: 0.5 }}
+        exit={{ opacity: 0, scale: 0.5 }}
+      >
+        <Home />
+      </motion.div>
+      <motion.div
+        transition={{ duration: 0.5 }}
+        initial={{ opacity: 0, scale: 0.5, x: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.5 }}
+        className='mt-2'
+      >
+        <About />
+      </motion.div>
       <motion.div
         transition={{ duration: 0.5 }}
         initial={{ opacity: 0, scale: 0.5, x: 0 }}
         whileInView={{ opacity: 1, scale: 1 }}
         exit={{ opacity: 0, scale: 0.5 }}
       >
-        <About />
+        <Skills />
       </motion.div>
     </main>
   )
