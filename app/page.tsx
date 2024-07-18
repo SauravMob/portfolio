@@ -6,6 +6,7 @@ import _ from 'lodash'
 import Home from './(home)/home'
 import About from './(home)/about'
 import Skills from './(home)/skills'
+import { Experience } from './(home)/experience'
 
 const Page = () => {
   const [mousePosition, setMousePosition] = useState({ x: 0, y: 0 })
@@ -90,6 +91,14 @@ const Page = () => {
         exit={{ opacity: 0, scale: 0.5 }}
       >
         <Skills />
+      </motion.div>
+      <motion.div
+        transition={{ duration: 0.5 }}
+        initial={{ opacity: 0, scale: 0.5, x: 0 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        exit={{ opacity: 0, scale: 0.5 }}
+      >
+        <Experience />
       </motion.div>
     </main>
   )

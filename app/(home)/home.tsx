@@ -1,12 +1,8 @@
 import React from 'react'
-import localFont from 'next/font/local'
 import Image from 'next/image'
 import profile_pic from '@/public/profile_pic.jpg'
 import real_profile_pic from '@/public/real_profile_pic.jpeg'
-
-const myFont = localFont({
-    src: "../../public/LondrinaOutline.ttf"
-})
+import { hollow } from '../assets/fonts'
 
 const Home = () => {
     return (
@@ -19,20 +15,20 @@ const Home = () => {
                 <span className='absolute left-3 rotate-90 bottom-72 transition translate-y-4'>{">>"}</span>
                 <p className='font-semibold text-7xl text-gray-150'>Hey,</p>
                 <div className='font-semibold text-7xl text-gray-150 my-8'>I'm
-                    <span className={`${myFont.className} ml-4 transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>S</span>
-                    <span className={`${myFont.className} transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>a</span>
-                    <span className={`${myFont.className} transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>u</span>
-                    <span className={`${myFont.className} transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>r</span>
-                    <span className={`${myFont.className} transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>a</span>
-                    <span className={`${myFont.className} transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>v</span>
-                    <span className={`${myFont.className} ml-4 transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>U</span>
-                    <span className={`${myFont.className} transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>p</span>
-                    <span className={`${myFont.className} transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>a</span>
-                    <span className={`${myFont.className} transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>d</span>
-                    <span className={`${myFont.className} transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>h</span>
-                    <span className={`${myFont.className} transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>y</span>
-                    <span className={`${myFont.className} transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>a</span>
-                    <span className={`${myFont.className} transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>y</span>
+                    <span className={`${hollow.className} ml-4 transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>S</span>
+                    <span className={`${hollow.className} transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>a</span>
+                    <span className={`${hollow.className} transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>u</span>
+                    <span className={`${hollow.className} transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>r</span>
+                    <span className={`${hollow.className} transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>a</span>
+                    <span className={`${hollow.className} transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>v</span>
+                    <span className={`${hollow.className} ml-4 transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>U</span>
+                    <span className={`${hollow.className} transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>p</span>
+                    <span className={`${hollow.className} transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>a</span>
+                    <span className={`${hollow.className} transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>d</span>
+                    <span className={`${hollow.className} transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>h</span>
+                    <span className={`${hollow.className} transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>y</span>
+                    <span className={`${hollow.className} transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>a</span>
+                    <span className={`${hollow.className} transition ease-in-out hover:scale-125 hover:text-blue-500 duration-150 inline-block`}>y</span>
                     ,</div>
                 <p className='font-semibold text-7xl text-gray-150'>Software Developer</p>
                 <p className='font-semibold text-3xl text-gray-600 ml-2 mt-4'>Full Stack Developer</p>

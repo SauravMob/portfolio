@@ -26,10 +26,7 @@ import bootstrap from '@/public/bootstrap.png'
 import hibernate from '@/public/hibernate.svg'
 import Image from 'next/image'
 import Marquee from "react-fast-marquee"
-
-const myFont = localFont({
-    src: "../../public/LondrinaOutline.ttf"
-})
+import { hollow } from '../assets/fonts'
 
 const Skills = () => {
 
@@ -40,7 +37,7 @@ const Skills = () => {
             id="skills"
             className='w-full h-screen sm:min-h-[90vh] p-16 mt-2'
         >
-            <div className={`${myFont.className} flex justify-center text-6xl font-bold`}>Skills</div>
+            <div className={`${hollow.className} flex justify-center text-6xl font-bold`}>Skills</div>
 
             <div className='flex justify-around mt-12'>
                 <div className='flex items-center p-2 bg-slate-400 rounded-xl shadow-inner font-bold text-gray-700'>

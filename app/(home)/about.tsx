@@ -1,9 +1,5 @@
 import React from 'react'
-import localFont from 'next/font/local'
-
-const myFont = localFont({
-    src: "../../public/LondrinaOutline.ttf"
-})
+import { hollow } from '../assets/fonts'
 
 function About() {
     return (
@@ -14,8 +10,8 @@ function About() {
             <div className='h-[500px] w-[900px] shadow-2xl rounded-2xl bg-gradient-to-r from-gray-500 via-gray-600 to-gray-800 grid grid-cols-3'>
                 <div className='col-span-1 flex justify-center items-center'>
                     <div>
-                        <div className={`${myFont.className} font-bold text-8xl`}>About</div>
-                        <div className={`${myFont.className} font-bold text-8xl text-center mt-4`}>Me</div>
+                        <div className={`${hollow.className} font-bold text-8xl`}>About</div>
+                        <div className={`${hollow.className} font-bold text-8xl text-center mt-4`}>Me</div>
                     </div>
                 </div>
                 <div className='col-span-2 p-8 text-center text-xl my-auto'>
